@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
 //mongoose.connect('mongodb://localhost/news');
-mongoose.connect('mongodb://104.45.239.91:27017/news');
+//mongoose.connect('mongodb://104.45.239.91:27017/news');
+mongoose.connect(process.env.MONGO_CONNECTION);
 
 var express = require('express');
 var path = require('path');
